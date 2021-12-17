@@ -7,6 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.coroutines_example.data.api.ApiInterface
 import com.example.coroutines_example.data.api.MyDataItem
+import com.mikepenz.fastadapter.FastAdapter
+import com.mikepenz.fastadapter.adapters.ItemAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -14,12 +16,15 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class MainActivityViewMode : ViewModel() {
+class MainActivityViewModel : ViewModel() {
 
 
     var title1 : String = ""
     var number1 : Int = 0
     var number = MutableLiveData<String>()
+
+    val itemAdapter = ItemAdapter<AdapterOfItem>()
+    val fastAdapter = FastAdapter.with(itemAdapter)
 
 
     fun increaseNumber(){  //function that's increasing number in variable "number1" and then it's override into a number, that is Observable variable
@@ -36,7 +41,7 @@ class MainActivityViewMode : ViewModel() {
     }
 
 
-    fun getMyData() {
+   /* fun getMyData() {
 
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
@@ -44,7 +49,7 @@ class MainActivityViewMode : ViewModel() {
             .build()
             .create(ApiInterface::class.java)
 
-        val retrofitData = retrofitBuilder.getData()
+        val retrofitData = retrofitBuilder.getMovies()
 
         retrofitData.enqueue(object : Callback<List<MyDataItem>?> {
 
@@ -67,7 +72,7 @@ class MainActivityViewMode : ViewModel() {
                 Log.d(TAG, "meesage " + t.message)
             }
         })
-    }
+    }*/
     
 
 

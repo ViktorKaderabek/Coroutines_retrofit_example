@@ -32,60 +32,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/id1"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:gravity="center"
+                    android:layout_height="match_parent">
 
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/id2"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="@+id/id1"
-                    app:layout_constraintStart_toStartOf="@+id/id1"
-                    app:layout_constraintTop_toBottomOf="@+id/id1" />
-
-                <TextView
-                    android:id="@+id/id3"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="@+id/id2"
-                    app:layout_constraintStart_toStartOf="@+id/id2"
-                    app:layout_constraintTop_toBottomOf="@+id/id2" />
-
-                <TextView
-                    android:id="@+id/id4"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="@+id/id3"
-                    app:layout_constraintStart_toStartOf="@+id/id3"
-                    app:layout_constraintTop_toBottomOf="@+id/id3" />
-
-                <TextView
-                    android:id="@+id/id5"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toEndOf="@+id/id4"
-                    app:layout_constraintStart_toStartOf="@+id/id4"
-                    app:layout_constraintTop_toBottomOf="@+id/id4" />
+                </androidx.recyclerview.widget.RecyclerView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
